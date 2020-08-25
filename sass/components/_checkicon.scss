@@ -1,0 +1,40 @@
+.checkicon {
+
+    &__icon {
+        cursor: pointer;
+        color: $snow;
+
+        &--normal-size{
+        font-size: 1.8rem;
+            
+        }
+        &--big-size {
+            font-size: 2.2rem;
+        }
+        
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__checkbox--heart:checked+&__label &__icon {
+        color: $primary;
+    }
+
+    &__checkbox--star:checked+&__label &__icon {
+        color: #f9d71c;
+    }
+
+    &__checkbox--arrow:checked+&__label &__icon {
+        color: #174666;
+    }
+
+    &__checkbox--cart:checked+&__label &__icon {
+        color: #d62c1a;
+    }
+
+    &__checkbox--thumb:checked+&__label &__icon {
+        color: #0097e6;
+    }
+}

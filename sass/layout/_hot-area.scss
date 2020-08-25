@@ -1,0 +1,11 @@
+.hot-area {
+    display: flex;
+    align-items: center;
+    width: 114rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+
+    &~& {
+        margin-bottom: 0;
+    }
+}

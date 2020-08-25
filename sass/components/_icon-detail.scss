@@ -1,0 +1,19 @@
+.icon-detail {
+    display: flex;
+
+    &__icon {
+        width: 3.3rem;
+        margin-right: 1.3rem;
+    }
+
+    &__text {
+        font-size: 1.63rem;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        align-self: center;
+
+        b {
+            text-transform: uppercase;
+        }
+    }
+}

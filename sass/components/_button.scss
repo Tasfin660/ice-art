@@ -1,0 +1,97 @@
+.button {
+
+    &:link,
+    &:visited {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.3rem;
+        position: relative;
+        border-radius: 20rem;
+        padding: .1px 11px;
+        transition: all .2s;
+    }
+
+    &:hover {
+        transform: scaleX(1) translateY(-1.3px);
+        box-shadow: 0 1rem 2rem rgba($black, 0.2);
+
+        &::after {
+            transform: scaleX(1.1);
+            opacity: 1;
+        }
+    }
+
+    &--white:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($white4, 0.1);
+    }
+
+    &--pink:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($black, 0.16);
+    }
+
+    &--white {
+        background-color: $white1;
+        color: $primary;
+
+        &::after {
+            background-color: $white1;
+        }
+    }
+
+
+
+    &--pink {
+        background-image: linear-gradient(to right bottom, $primaryL, $primary);
+        color: $white1;
+
+        &::after {
+            background-image: linear-gradient(to right bottom, $primaryL, $primary);
+        }
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+}
+
+.button-cream {
+
+    &:link,
+    &:visited {
+        padding: 1.5rem 5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        border-radius: 10rem;
+        background-color: white;
+        color: $fontColor;
+        transition: all .2s;
+    }
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($black, .2);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem  1rem rgba($black, 0.2);
+    }
+
+    &--animated {
+        animation: moveInBottom .5s ease-out .25s;
+        animation-fill-mode: backwards;
+    }
+
+}

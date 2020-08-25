@@ -1,0 +1,22 @@
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.js--wp--feature-box,
+.js--wp--arrow {
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+
+    &.animate__animated {
+        opacity: 1;
+    }
+}

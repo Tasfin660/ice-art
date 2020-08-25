@@ -1,0 +1,64 @@
+section {
+    outline: none;
+}
+
+.section-hot {
+    padding: 10rem 0;
+    background-color: #f7fbfb;
+}
+
+.section-feature {
+    background-color: $primaryL;
+    height: 50rem;
+    padding: 3.5rem 0;
+}
+
+.section-product {
+    padding: 10rem 0;
+    background-color: #fff7fc;
+}
+
+.section-work {
+    padding: 10rem 0;
+    background-color: #f7fbfb;
+
+    @media only screen and (max-width: 81.25em) {
+        padding: 5rem 0;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, max-content) 6rem;
+        justify-content: center;
+    }
+}
+
+.section-buying {
+    padding: 10rem 0;
+    background-color: #fff7fc;
+}
+
+.section-workers {
+    padding: 5rem 0;
+    background-color: #ffe6fc;
+    position: relative;
+    background-image: linear-gradient($primary, $primary);
+    background-size: 2px 48%;
+    background-repeat: no-repeat;
+    background-position: 49.5% center;
+}
+
+.section-gallery {
+    background-color: $chocolateD2;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 5vw);
+    grid-gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.section-reviews {
+    padding-top: 10rem;
+    padding-bottom: 1rem;
+    background-color: #f7fbfb;
+}

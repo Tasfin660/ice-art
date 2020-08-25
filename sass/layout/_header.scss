@@ -1,0 +1,102 @@
+.header {
+    outline: none;
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, rgba($primaryL, .8), rgba($primaryD, .8)),
+        url(../img/hero-small.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 125em) {
+        background-image: linear-gradient(to right bottom, rgba($primaryL, .8), rgba($primaryD, .8)),
+            url(../img/hero.jpg);
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 2.3rem;
+        left: 2.3rem;
+    }
+
+    &__logo {
+        height: 7rem;
+    }
+
+    &__nav {
+        position: absolute;
+        top: 3rem;
+        right: 4rem;
+
+        &__list {
+            list-style: none;
+        }
+
+        &__item {
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+
+        &__link {
+
+            &:link,
+            &:visited {
+                display: block;
+                backface-visibility: hidden;
+                font-size: 1.4rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 1.5rem;
+                color: $white2;
+                transition: transform .4s ease-out, text-shadow .2s ease-out;
+            }
+
+            &:hover,
+            &:active {
+                text-shadow: 0 0 2px $white1;
+                transform: translateY(-1.5rem) scale(1.05);
+            }
+        }
+
+        /* &__btn {
+            position: relative;
+            vertical-align: middle;
+            display: inline-block;
+            backface-visibility: hidden;
+            margin-left: 3px;
+
+            &__bg {
+                width: 6.5rem;
+                height: 1.7rem;
+                background-color: white;
+                border-radius: 10rem;
+                transition: all .3s ease-out;
+            }
+
+            &__link {
+                position: absolute;
+                top: 0;
+                left: 1.1rem;
+                text-decoration: none;
+                font-size: 1.4rem;
+                color: $primary;
+            }
+        } 
+
+        &__btn:hover &__btn__bg {
+            transform: scaleX(1.15) scaley(1.01) translateY(-.6px);
+        }
+        */
+    }
+
+    &__text-box {
+        @include absCenter;
+        top: 40%;
+        text-align: center;
+    }
+
+}

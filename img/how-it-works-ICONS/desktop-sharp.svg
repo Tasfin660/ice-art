@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+</style>
+<title>ionicons-v5-h</title>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="16" y1="256" x2="496" y2="256">
+	<stop  offset="0" style="stop-color:#FF449F"/>
+	<stop  offset="1" style="stop-color:#D5085D"/>
+</linearGradient>
+<path class="st0" d="M480,48H32c-8.8,0-16,7.2-16,16v320c0,8.8,7.2,16,16,16h168v32h-72v32h256v-32h-72v-32h168c8.8,0,16-7.2,16-16
+	V64C496,55.2,488.8,48,480,48z M460,84v216H52V84H460z M240.1,354.1c-1.1-8.8,5-16.8,13.8-17.9c8.8-1.1,16.8,5,17.9,13.8
+	c1.1,8.8-5,16.8-13.8,17.9c-1.4,0.2-2.8,0.2-4.1,0C246.7,366.9,241.1,361.3,240.1,354.1z"/>
+</svg>

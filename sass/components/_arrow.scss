@@ -1,0 +1,25 @@
+.arrow {
+    background-image: linear-gradient(rgba($primaryD, .65), rgba($primaryD, .65)), url(../../img/arrow/pink.jpg);
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0 80%);
+    width: 20rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+
+    &--1 {
+        animation-duration: 1.5s !important;
+    }
+
+    &--2 {
+        animation-duration: 2.5s !important;
+    }
+
+    &__txt {
+        color: $snow;
+        font-size: 1.8rem;
+        text-decoration: none;
+        border-bottom: 1.4px solid $snow;
+        margin-left: 2rem;
+        text-transform: uppercase;
+    }
+}

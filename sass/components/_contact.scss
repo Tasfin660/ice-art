@@ -1,0 +1,16 @@
+.contact {
+    display: inline-flex;
+    font-size: 1.4rem;
+    background-color: $mint-cream;
+    border-radius: 10rem;
+    padding: 2.5px 1rem;
+
+    &__icon {
+        color: $primary;
+        margin-right: 1rem;
+    }
+
+    &__txt {
+        color: #666;
+    }
+}

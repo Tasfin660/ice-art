@@ -1,0 +1,301 @@
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 30rem);
+    grid-gap: 6rem;
+    justify-content: center;
+
+    @media only screen and (max-width: 87.5em) {
+        grid-gap: 4rem;
+    }
+
+    @media only screen and (max-width: 84.375em) {
+        grid-template-columns: repeat(4, 28rem);
+    }
+
+    @media only screen and (max-width: 78.125em) {
+        grid-template-columns: repeat(4, 26rem);
+    }
+}
+
+.product {
+    border: 2px solid;
+    border-radius: 1rem;
+    background-color: #f5fefa;
+    box-shadow: 0px .5rem 1rem rgba($black, .2);
+    overflow: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all .4s ease-out;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 1.5rem 2.2rem rgba($black, .4);
+    }
+
+    &__border {
+        &-s {
+            border-color: $primary;
+        }
+
+        &-m {
+            border-color: $mango;
+        }
+
+        &-v {
+            border-color: #aaa;
+        }
+
+        &-c {
+            border-color: $chocolateL;
+        }
+    }
+
+    &__hero {
+        width: 100%;
+        backface-visibility: hidden;
+    }
+
+    &__slideshow {
+        display: none;
+        position: relative;
+        height: 19.7rem;
+
+        &__slides {
+            position: absolute;
+        }
+
+        &__img {
+            width: 100%;
+        }
+    }
+
+    &__heading {
+        padding: 1rem;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        word-spacing: .4rem;
+        backface-visibility: hidden;
+        border-top: 2px solid;
+        border-bottom: 2px solid;
+
+        @media only screen and (max-width: 78.125em) {
+            font-size: 1.8rem;
+        }
+
+        &__border {
+            &-s {
+                border-color: $primary;
+            }
+
+            &-m {
+                border-color: $mango;
+            }
+
+            &-v {
+                border-color: #aaa;
+            }
+
+            &-c {
+                border-color: $chocolateL;
+            }
+        }
+    }
+
+    &__box {
+        backface-visibility: hidden;
+        padding: 1.3rem;
+        background-color: $mint-cream;
+        position: relative;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        font-size: 1.5rem;
+        margin-bottom: .7rem;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 1.2rem;
+            width: 1.2rem;
+            margin-right: .7rem;
+
+            // Older borwsers
+            background-image: url(../img/chevron-thin-right.svg);
+            background-size: cover;
+
+            //Newer browsers -masks
+            @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+                //background-color: $primary;
+                -webkit-mask-image: url(../img/chevron-thin-right.svg);
+                -webkit-mask-size: cover;
+                mask-image: url(../img/chevron-thin-right.svg);
+                mask-size: cover;
+                background-image: none;
+            }
+
+        }
+
+        &-s::before {
+            @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+                background-color: $primary;
+            }
+        }
+
+        &-m::before {
+            @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+                background-color: $mangoD;
+            }
+        }
+
+        &-v::before {
+            @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+                background-color: #aaa;
+            }
+        }
+
+        &-c::before {
+            @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+                background-color: $chocolate;
+            }
+        }
+    }
+
+    &__long {
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 1.4;
+        margin-top: 2rem;
+    }
+
+    &__votes {
+        backface-visibility: hidden;
+        color: $snow;
+        width: 6rem;
+        height: 4.5rem;
+        position: absolute;
+        top: 1.5rem;
+        right: 0;
+        border-top-left-radius: .3rem;
+        border-bottom-left-radius: .3rem;
+        box-shadow: 1px 1px 1rem rgba($black, .2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-s {
+            background-image: linear-gradient(to right bottom, $primaryL, $primaryD);
+        }
+
+        &-m {
+            background-image: linear-gradient(to right bottom, $mango, $mangoD);
+        }
+
+        &-v {
+            background-image: linear-gradient(to right bottom, #c4c4c4, #aaa);
+        }
+
+        &-c {
+            background-image: linear-gradient(to right bottom, $chocolateL, $chocolate);
+        }
+
+        &-score {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: .3rem;
+        }
+
+        &-txt {
+            font-size: .8rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &__icon {
+        height: 1.6rem;
+        width: 1.6rem;
+        margin-bottom: -3px;
+        margin-left: 4px;
+        backface-visibility: hidden;
+
+        &-s {
+            fill: $primary;
+        }
+
+        &-m {
+            fill: $mangoD;
+        }
+
+        &-v {
+            fill: #999;
+        }
+
+        &-c {
+            fill: $chocolateL;
+        }
+    }
+
+    &__button {
+        backface-visibility: hidden;
+
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $snow;
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding: .6rem 0;
+            align-self: stretch;
+            text-align: center;
+            transition: all .2s;
+        }
+
+        &--pink:link,
+        &--pink:visited {
+            //background-image: linear-gradient($primaryL, $primary);
+            background-image: linear-gradient(-5.5deg,
+                    $primary 0%,
+                    $primary 50%,
+                    $primaryL 50%);
+        }
+
+        &--yellow:link,
+        &--yellow:visited {
+            background-image: linear-gradient(-5.5deg,
+                    $mango 0%,
+                    $mango 50%,
+                    $mangoL 50%);
+        }
+
+        &--white:link,
+        &--white:visited {
+            color: inherit;
+            background-image: linear-gradient(-5.5deg,
+                    #d5d5d5 0%,
+                    #d5d5d5 50%,
+                    $white4 50%);
+        }
+
+        &--dark:link,
+        &--dark:visited {
+            background-image: linear-gradient(-5.5deg,
+                    $chocolateD1 0%,
+                    $chocolateD1 50%,
+                    $chocolate 50%);
+        }
+
+        &:active {
+            filter: brightness(.9);
+        }
+    }
+}

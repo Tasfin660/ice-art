@@ -1,0 +1,49 @@
+.hot {
+    width: max-content;
+    background-color: #e8f6ff;
+    border-radius: 1rem;
+    padding: .4rem;
+    box-shadow: .3rem .3rem 1rem rgba($black, .25);
+    display: flex;
+    position: relative;
+    margin-right: 6rem;
+    margin-left: auto;
+
+    &~& {
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+
+    &__overlay {
+        width: 27rem;
+        height: 95.6%;
+        background-image: linear-gradient(to right bottom, rgba(#f9fdff, .4), rgba(#e8f6ff, .6));
+        clip-path: polygon(0 0, 50% 0, 75% 100%, 0% 100%);
+        position: absolute;
+        top: .4rem;
+        left: .4rem;
+    }
+
+    &__img {
+        width: 27rem;
+        height: auto;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+    &__star-collection {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-image: linear-gradient(to right bottom, $chocolate, $chocolateD1);
+        padding: .5rem;
+        align-self: stretch;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+
+    &__star {
+        width: 2rem;
+    }
+}

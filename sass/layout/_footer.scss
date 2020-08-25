@@ -1,0 +1,205 @@
+.footer {
+    background-image: linear-gradient(to bottom, $chocolateD1, $chocolateD2);
+    color: $snow;
+
+    &--main {
+        width: 100%;
+        padding: 3rem;
+        position: relative;
+
+        &__nav {
+            margin-bottom: 4rem;
+        }
+
+        &__list {
+            list-style: none;
+        }
+
+        &__item {
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+        }
+
+        &__nav-link {
+
+            &:link,
+            &:visited {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $snow;
+                font-size: 1.4rem;
+                transition: all .2s;
+            }
+
+            &:active,
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        &__long {
+            width: 23rem;
+            padding: 1.5rem;
+            font-size: 1.4rem;
+            text-align: justify;
+            position: relative;
+
+            a:link,
+            a:visited {
+                color: inherit;
+                text-decoration: none;
+                transition: all .2s;
+            }
+
+            a:hover,
+            a:active {
+                color: #f54335;
+            }
+
+            &:after,
+            &:before {
+                content: " ";
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                border: 0px solid #fff;
+            }
+
+            &:after {
+                top: -2px;
+                left: -2px;
+                border-top: 3.3px solid $snow;
+                border-left: 3.3px solid $snow;
+            }
+
+            &:before {
+                bottom: -2px;
+                right: -2px;
+                border-bottom: 3.3px solid $snow;
+                border-right: 3.3px solid $snow;
+            }
+        }
+
+
+        &__logo {
+            display: flex;
+            @include absCenter;
+
+            img {
+                height: 20rem;
+
+                @media only screen and (max-width: 83.125em) {
+                    height: 17rem;
+                }
+            }
+
+            p {
+                align-self: center;
+                font-size: 12rem;
+                text-transform: uppercase;
+                cursor: default;
+                transition: all .4s;
+
+                @media only screen and (max-width: 83.125em) {
+                    font-size: 10rem;
+                }
+
+                &:hover {
+                    color: $primary;
+                }
+
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        &__social-media {
+            position: absolute;
+            top: 3rem;
+            right: 3rem;
+
+            &__heading {
+                font-size: 1.6rem;
+                letter-spacing: .7px;
+                word-spacing: 1.3px;
+                margin-bottom: .8rem;
+            }
+
+            &__list {
+                list-style: none;
+                column-count: 2;
+            }
+
+            &__item {
+                display: inline-block;
+            }
+
+            &__link {
+
+                &:link,
+                &:visited {
+                    color: $snow;
+                    font-size: 1.6rem;
+                    line-height: 1.7;
+                    text-decoration: none;
+                    transition: .2s linear;
+                }
+
+                &:active,
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+
+        &__move-top {
+            position: absolute;
+            right: 3rem;
+            bottom: 3rem;
+
+            background-color: $snow;
+            text-align: center;
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 20%;
+            padding: 1px;
+            cursor: pointer;
+            transition: all .3s;
+
+            a:link,
+            a:visited {
+                color: #3b3b3b;
+                font-size: 2.5rem;
+                transition: all .3s;
+            }
+
+            &:hover {
+                background-color: $primary;
+            }
+
+            &:hover a {
+                color: $snow;
+            }
+        }
+    }
+
+    &--sub {
+        width: 100%;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        background-color: $primary;
+
+        &__copy {
+            font-size: 1.4rem;
+            letter-spacing: .7px;
+            word-spacing: .9px;
+            font-weight: 300;
+            padding: 1px;
+            text-align: center;
+        }
+    }
+}
